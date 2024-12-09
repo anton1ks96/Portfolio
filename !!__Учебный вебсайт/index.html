@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="gsap.min.js"></script>
+    <script src="ScrollSmoother.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>Educational Website</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="#faq">FAQs</a>
+        <a href="#">Главная</a>
+        <a href="#">Контакты</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="content">
+          <div data-speed="0.8" class="hero-section">
+            <h1 class="hero-title">Учись легко,<br />достигай большего</h1>
+            <p>
+              Простое и понятное обучение программированию для тех,<br />кто
+              хочет разобраться в сложных темах.
+            </p>
+
+            <form class="email-form">
+              <div class="input-container">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="youradress@email.com"
+                  required
+                  style="width: 100%; box-sizing: border-box"
+                />
+                <button type="submit">Отправить</button>
+              </div>
+            </form>
+
+            <div class="ticker">
+                <div class="ticker__wrapper">
+                    <div class="ticker__item">Колледж Цифровых Технологий</div>
+                    <div class="ticker__item">Колледж Цифровых Технологий</div>
+                    <div class="ticker__item">Колледж Цифровых Технологий</div>
+                    <div class="ticker__item">Колледж Цифровых Технологий</div>
+                </div>
+            </div>
+          </div>
+
+          <div data-speed="1" class="hero-introduction">
+            <h1 class="hero-start">ВВЕДЕНИЕ</h1>
+            <p>
+              Мы понимаем, как сложно начать изучать программирование
+              <span
+                >и разобраться в его тонкостях. Многие учебные ресурсы могут
+                быть перегружены информацией и сложными терминами. Именно
+                поэтому мы создали этот сайт — </span
+              >чтобы обучение стало простым, доступным и понятным для каждого.
+            </p>
+          </div>
+
+          <div data-speed="1" class="hero-receive">
+            <h1 class="hero-start">ЧТО ВЫ ПОЛУЧИТЕ</h1>
+            <p>
+              Мы упростим освоение программирования, помогая разобраться в
+              сложных концепциях и практических навыках. Наши курсы предлагают
+              четкие объяснения, интерактивные задания и поддержку на каждом
+              этапе обучения.
+            </p>
+          </div>
+
+          <div class="blocks-container">
+            <div class="block">
+              <img src="img\Git_Logo_00000 1.png" />
+              <p>Руководство по использованию Git</p>
+            </div>
+            <div class="block">
+              <img src="img\Article_Logo_v2 1.png" />
+              <p>Ресурсы для обучения</p>
+            </div>
+            <div class="block">
+              <img src="img\Comp 1_00000 1.png" />
+              <p>Руководство по использованию VS Code</p>
+            </div>
+          </div>
+
+          <!-- <div class="block-container">
+          <div class="horizontal-block">
+            <img src="img\RedMine_Logo_00000 1.png">
+            <img src="img\KCT_Logo_000001.png">
+            <img src="img\GitBucket_Logo_00000_00000 1.png">
+            <p>git</p>
+          </div>
+        </div> -->
+
+          <div class="faq" id="faq">
+            <div class="faq-title">
+              <h1 class="hero-start">FAQs</h1>
+              <p>У нас есть ответы на все вопросы</p>
+            </div>
+
+            <div class="framer-faq">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <p>Зачем мы это сделали?</p>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Мы создали этот сайт, чтобы собрать в одном месте лучшие
+                  ресурсы и мануалы, которые помогут вам разобраться в самых
+                  разных аспектах технологий. В интернете много информации, и
+                  иногда сложно понять, с чего начать или где найти качественные
+                  материалы. Наша цель — предоставить вам удобный доступ к
+                  проверенным сайтам и документации, которые действительно
+                  полезны.
+                </p>
+              </div>
+            </div>
+
+            <div class="framer-faq">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <p>Почему?</p>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Потому что мы знаем, как сложно найти подходящий ресурс, когда
+                  только начинаешь изучать что-то новое. Часто требуется много
+                  времени, чтобы отсеять ненужное и найти то, что подходит
+                  именно вам. Мы хотим сократить это время и дать вам
+                  возможность сразу перейти к изучению качественных материалов.
+                </p>
+              </div>
+            </div>
+
+            <div class="framer-faq">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <p>Какая цель?</p>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Наша цель — сделать доступ к полезной информации простым и
+                  быстрым. Мы не создаём собственные уроки или курсы, а собираем
+                  проверенные и надёжные ресурсы, которые помогут вам освоить
+                  новые навыки. Мы стремимся стать вашим первым помощником в
+                  поиске информации.
+                </p>
+              </div>
+            </div>
+
+            <div class="framer-faq">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <p>Почему мы уверены в качестве?</p>
+                <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Мы тщательно проверяем каждый добавленный ресурс, чтобы
+                  убедиться, что он актуален, понятен и полезен. Мы используем
+                  эти материалы сами и знаем, что они работают. Если что-то
+                  меняется, мы обновляем ссылки, чтобы у вас всегда был доступ к
+                  самым свежим данным.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
