@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="gsap.min.js"></script>
-    <script src="ScrollSmoother.min.js"></script>
-    <script src="ScrollTrigger.min.js"></script>
-    <script src="script.js" defer></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollSmoother.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/ScrollToAnchor.js" defer></script>
     <title>Educational Website</title>
   </head>
 
   <body>
     <header>
       <nav>
-        <a href="#faq">FAQs</a>
-        <a href="#">Главная</a>
-        <a href="#">Контакты</a>
+        <a onclick="scrollToAnchor('faq')">FAQs</a>
+        <a onclick="scrollToAnchor('')">Главная</a>
+        <a onclick="scrollToAnchor('')">Контакты</a>
       </nav>
     </header>
 
