@@ -5,8 +5,6 @@
 
 * {
     scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
 }
 
 html::-webkit-scrollbar {
@@ -45,6 +43,7 @@ header nav {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     z-index: 1000;
+    cursor: default;
 }
 
 header a {
@@ -53,6 +52,7 @@ header a {
     font-weight: normal;
     margin: 0 15px;
     transition: 0.4s ease;
+    cursor: pointer;
 }
 
 header a:hover {
@@ -284,18 +284,18 @@ header a:hover {
     height: 700px;
     background: linear-gradient(169deg, rgba(221, 255, 0, 0.06) 0.37%, rgba(0, 150, 204, 0.06) 53.37%, rgba(133, 153, 0, 0.06) 90.97%);
     filter: blur(53px);
-    border-radius: 50%; 
-    bottom: -400px; 
+    border-radius: 50%;
+    bottom: -400px;
     left: 400px;
     opacity: 0;
-    transition: all 0.5s ease; 
-    
+    transition: all 0.5s ease;
+
 }
 
 .block:hover::after {
     bottom: -350px;
-    left: 100px; 
-    opacity: 1; 
+    left: 100px;
+    opacity: 1;
 }
 
 
@@ -392,6 +392,7 @@ header a:hover {
     background-color: #161616;
     color: #676767;
     transition: all 0.3s ease;
+    max-height: fit-content;
 }
 
 .framer-faq.active {
@@ -403,4 +404,119 @@ header a:hover {
 .framer-faq {
     opacity: 0;
     transform: translateY(20px);
+}
+
+@media screen and (max-width: 1400px) {
+    .blocks-container {
+        gap: 30px;
+    }
+
+    .block {
+        width: 307px;
+        height: 406px;
+    }
+
+    .block p {
+        font-size: 22px;
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .blocks-container {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .block {
+        width: 307px;
+        height: 406px;
+    }
+
+    .block p {
+        font-size: 22px;
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blocks-container {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .block {
+        width: 307px;
+        height: 406px;
+    }
+
+    .block p {
+        font-size: 22px;
+        max-width: 200px;
+    }
+
+    .hero-title {
+        font-size: 56px;
+        line-height: normal;
+    }
+
+    .hero-section p {
+        font-size: 24px;
+        max-width: 400px;
+    }
+
+    .hero-introduction p,
+    .hero-receive p {
+        max-width: 350px;
+        font-size: 22px;
+    }
+
+    .hero-start {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .email-form {
+        display: none;
+    }
+
+    .faq {
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .email-form {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        line-height: normal;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+        max-width: 400px;
+    }
+
+    .hero-introduction p,
+    .hero-receive p {
+        max-width: 350px;
+        font-size: 18px;
+    }
+
+    .blocks-container {
+        flex-wrap: wrap;
+    }
+
+    .faq-title p {
+        font-size: 22px;
+    }
+
+    .faq {
+        min-width: 350px;
+    }
+
 }
