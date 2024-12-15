@@ -7,7 +7,7 @@ ScrollSmoother.create({
     effects: true,
 });
 
-gsap.from(".block:nth-child(1)", {
+gsap.from(".blocks-container > a:nth-child(1) .block", {
     x: "-100%",
     rotateY: -70,
     opacity: 0,
@@ -21,8 +21,7 @@ gsap.from(".block:nth-child(1)", {
     }
 });
 
-
-gsap.from(".block:nth-child(2)", {
+gsap.from(".blocks-container > a:nth-child(2) .block", {
     scale: 0,
     opacity: 0,
     duration: 2,
@@ -35,7 +34,7 @@ gsap.from(".block:nth-child(2)", {
     }
 });
 
-gsap.from(".block:nth-child(3)", {
+gsap.from(".blocks-container > a:nth-child(3) .block", {
     x: "100%",
     rotateY: -90,
     opacity: 0,
@@ -45,19 +44,6 @@ gsap.from(".block:nth-child(3)", {
         trigger: ".blocks-container",
         start: "top 90%",
         end: "top 40%",
-        scrub: true,
-    }
-});
-
-gsap.from(".horizontal-block", {
-    scale: 0,
-    opacity: 0,
-    duration: 2,
-    ease: "power2.out",
-    scrollTrigger: {
-        trigger: ".block-container",
-        start: "top 120%",
-        end: "end 70%",
         scrub: true,
     }
 });
@@ -87,35 +73,35 @@ const observer = new IntersectionObserver((entries) => {
 
 spanAnim.forEach((span) => observer.observe(span));
 
-let activeFAQ = null; 
- 
-function toggleFAQ(element) { 
-    const faq = element.parentElement; 
-    const answer = faq.querySelector(".faq-answer"); 
- 
-    if (faq.classList.contains("active")) { 
-        answer.style.height = "0"; 
-        answer.style.opacity = "0"; 
-        answer.style.padding = "0 20px"; 
-        faq.classList.remove("active"); 
-        activeFAQ = null; 
- 
-    } else { 
- 
-        if (activeFAQ && activeFAQ != faq) { 
-            const activeAnswer = activeFAQ.querySelector('.faq-answer'); 
-            activeAnswer.style.height = "0"; 
-            activeAnswer.style.opacity = "0"; 
-            activeAnswer.style.padding = "0 20px"; 
-            activeFAQ.classList.remove("active"); 
-        } 
- 
-        faq.classList.add("active"); 
-        answer.style.height = `${answer.scrollHeight}px`; 
-        answer.style.opacity = "1"; 
-        answer.style.padding = "15px 20px"; 
- 
-        activeFAQ = faq; 
+let activeFAQ = null;
+
+function toggleFAQ(element) {
+    const faq = element.parentElement;
+    const answer = faq.querySelector(".faq-answer");
+
+    if (faq.classList.contains("active")) {
+        answer.style.height = "0";
+        answer.style.opacity = "0";
+        answer.style.padding = "0 20px";
+        faq.classList.remove("active");
+        activeFAQ = null;
+
+    } else {
+
+        if (activeFAQ && activeFAQ != faq) {
+            const activeAnswer = activeFAQ.querySelector('.faq-answer');
+            activeAnswer.style.height = "0";
+            activeAnswer.style.opacity = "0";
+            activeAnswer.style.padding = "0 20px";
+            activeFAQ.classList.remove("active");
+        }
+
+        faq.classList.add("active");
+        answer.style.height = `${answer.scrollHeight}px`;
+        answer.style.opacity = "1";
+        answer.style.padding = "15px 20px";
+
+        activeFAQ = faq;
     }
 }
 
@@ -155,4 +141,3 @@ faqTimeline
         duration: 0.5
     }, "-=0.3");
 
-    
