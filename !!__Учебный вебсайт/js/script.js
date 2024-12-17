@@ -7,55 +7,103 @@ ScrollSmoother.create({
     effects: true,
 });
 
-gsap.from(".blocks-container > a:nth-child(1) .block", {
-    x: "-100%",
-    rotateY: -70,
-    opacity: 0,
-    duration: 2,
-    ease: "power2.out",
-    scrollTrigger: {
-        trigger: ".blocks-container",
-        start: "top 90%",
-        end: "top 40%",
-        scrub: true,
-    }
+let mp = gsap.matchMedia();
+
+mp.add("(max-width: 767px)", () => {
+    gsap.from(".blocks-container > a:nth-child(1) .block", {
+        scale: 0,
+        opacity: 0,
+        duration: 2,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: ".blocks-container",
+            start: "top 70%",
+            end: "top 50%",
+            scrub: true,
+        }
+    });
+
+    gsap.from(".blocks-container > a:nth-child(2) .block", {
+        scale: 0,
+        opacity: 0,
+        duration: 2,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: ".blocks-container",
+            start: "top 60%",
+            end: "top 40%",
+            scrub: true,
+        }
+    });
+
+    gsap.from(".blocks-container > a:nth-child(3) .block", {
+        x: "100%",
+        rotateY: -90,
+        opacity: 0,
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".blocks-container",
+            start: "top 20%",
+            end: "top 10%",
+            scrub: true,
+        }
+    });
 });
 
-gsap.from(".blocks-container > a:nth-child(2) .block", {
-    scale: 0,
-    opacity: 0,
-    duration: 2,
-    ease: "back.out(1.7)",
-    scrollTrigger: {
-        trigger: ".blocks-container",
-        start: "top 90%",
-        end: "top 50%",
-        scrub: true,
-    }
-});
+let dp = gsap.matchMedia();
 
-gsap.from(".blocks-container > a:nth-child(3) .block", {
-    x: "100%",
-    rotateY: -90,
-    opacity: 0,
-    duration: 2,
-    ease: "power2.out",
-    scrollTrigger: {
-        trigger: ".blocks-container",
-        start: "top 90%",
-        end: "top 40%",
-        scrub: true,
-    }
-});
+dp.add("(min-width: 768px)", () => {
+    gsap.from(".blocks-container > a:nth-child(1) .block", {
+        x: "-100%",
+        rotateY: -70,
+        opacity: 0,
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".blocks-container",
+            start: "top 90%",
+            end: "top 40%",
+            scrub: true,
+        }
+    });
 
-gsap.to(".hero-title", {
-    duration: 2,
-    backgroundImage: "linear-gradient(200deg, rgb(114, 114, 103) 8%, rgb(255, 255, 247) 105%)",
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.inOut",
-});
+    gsap.from(".blocks-container > a:nth-child(2) .block", {
+        scale: 0,
+        opacity: 0,
+        duration: 2,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: ".blocks-container",
+            start: "top 90%",
+            end: "top 50%",
+            scrub: true,
+        }
+    });
 
+    gsap.from(".blocks-container > a:nth-child(3) .block", {
+        x: "100%",
+        rotateY: -90,
+        opacity: 0,
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".blocks-container",
+            start: "top 90%",
+            end: "top 40%",
+            scrub: true,
+        }
+    });
+
+
+    gsap.to(".hero-title", {
+        duration: 2,
+        backgroundImage: "linear-gradient(200deg, rgb(114, 114, 103) 8%, rgb(255, 255, 247) 105%)",
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+    });
+});
 
 const spanAnim = document.querySelectorAll('.hero-introduction span')
 const observer = new IntersectionObserver((entries) => {
@@ -140,4 +188,3 @@ faqTimeline
         stagger: 0.2,
         duration: 0.5
     }, "-=0.3");
-
