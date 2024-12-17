@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.svg">
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollSmoother.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/ScrollToAnchor.js" defer></script>
+    <title>Git Guide</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a onclick="scrollToAnchor('faq')">FAQs</a>
+            <a onclick="scrollToAnchor('')">Главная</a>
+            <a onclick="scrollToAnchor('')">Контакты</a>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="content">
+                <div class="hero-section">
+                    <h1 class="hero-title git-title">Git</h1>
+                    <p>Надежный компаньон в мире разработки</p>
+
+                    <h2 class="hero-title-git">СОДЕРЖАНИЕ</h2>
+                    <div class="buttons-git">
+                        <a href="#" class="btn-git">Установка Git на Windows</a>
+                        <a href="#" class="btn-git">Установка Git на MacOS</a>
+                        <a href="#" class="btn-git">Настройка Git</a>
+                        <a href="#" class="btn-git">Отправка файлов в репозиторий Git</a>
+                    </div>
+                </div>
+
+                <div class="hero-introduction">
+                    <div class="hero-git-how">
+                        <div class="git-how">
+                            <h1 class="hero-start">ЧТО ТАКОЕ GIT</h1>
+                            <div class="git-line">
+                                <div class="line"></div>
+                                <p>
+                                    Git — это современная распределённая система контроля версий, которая позволяет
+                                    отслеживать изменения в файлах, управлять версиями проектов и эффективно работать в
+                                    команде. Она используется разработчиками для сохранения истории изменений кода,
+                                    отката к
+                                    предыдущим версиям и упрощения совместной работы. Git поддерживает как локальное,
+                                    так и
+                                    удалённое хранение репозиториев, что делает его незаменимым инструментом для
+                                    управления
+                                    проектами любого масштаба.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-install">
+                    <h1 class="hero-start-git">УСТАНОВКА <span class="git-words">GIT</span> НА WINDOWS</h1>
+                    <div class="install-file">
+                        <h1 class="hero-start">Скачивание установочного файла</h1>
+                        <ol>
+                            <li>Откройте браузер и перейдите на официальный сайт Git: https://git-scm.com.</li>
+                            <li>На главной странице автоматически будет предложена версия для вашей операционной
+                                системы.
+                                Нажмите кнопку "Download for Windows".</li>
+                            <li>Дождитесь завершения загрузки установочного файла.</li>
+                        </ol>
+
+                        <h1 class="hero-start">Настройка установщика</h1>
+                        <p>При запуске установщика выполните следующие шаги:</p>
+
+                        <ol>
+                            <li>Лицензионное соглашение: Нажмите Next, чтобы принять лицензию.</li>
+                            <li>Выбор папки установки: Оставьте путь по умолчанию или выберите другую папку, затем
+                                нажмите Next.</li>
+                            <li>Компоненты установки: Оставьте настройки по умолчанию и нажмите Next.</li>
+                            <li>Меню "Пуск": Оставьте название по умолчанию или снимите галочку, если не хотите
+                                добавлять ярлык в меню "Пуск", затем нажмите Next.</li>
+                            <li>Выбор редактора по умолчанию: Рекомендуется выбрать vim, но можете выбрать любой
+                                предпочитаемый редактор (например, Notepad++), затем нажмите Next.</li>
+                            <li>Настройка имени главной ветки в новых репозиториях: Выберите пункт Override the default
+                                branch name for new repositories и укажите main в качестве имени главной ветки. Это имя
+                                часто используется в современных проектах вместо master для большей универсальности и
+                                соответствия текущим стандартам разработки.</li>
+                            <li>Настройка начального пути (PATH): Выберите опцию Git from the command line and also from
+                                3rd-party software (рекомендуется для универсальности), затем нажмите Next.</li>
+                            <li>SSH-экспорт: Оставьте настройку по умолчанию и нажмите Next.</li>
+                            <li>Настройки HTTPS: Выберите Use the OpenSSL library и нажмите Next.</li>
+                            <li>Выбор конечных настроек: Оставьте все параметры по умолчанию, нажимая Next, пока не
+                                увидите кнопку Install.</li>
+                            <li>Нажмите Install для начала установки.</li>
+                        </ol>
+
+                        <h1 class="hero-start">Завершение установки</h1>
+
+                        <ol>
+                            <li>После завершения процесса установки убедитесь, что отмечена галочка Launch Git Bash, и
+                                нажмите Finish, чтобы запустить терминал Git Bash.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="hero-install">
+                    <h1 class="hero-start-git">УСТАНОВКА <span class="git-words">GIT</span> НА MACOS</h1>
+                    <div class="install-file">
+                        <h1 class="hero-start">Установка Homebrew</h1>
+                        <p>
+                            Homebrew — это менеджер пакетов для macOS, который позволяет легко устанавливать,
+                            обновлять и управлять программным обеспечением и утилитами через терминал. Он упрощает
+                            работу с инструментами разработки, такими как Git, Node.js и Python.
+                        </p>
+
+                        <ol>
+                            <li>Откройте приложение Terminal на вашем Mac.</li>
+                            <li>Введите следующую команду, чтобы начать установку Homebrew: <br> /bin/bash -c "$(curl
+                                -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</li>
+                            <li>Дождитесь завершения процесса установки. Во время установки вас могут попросить ввести
+                                пароль администратора.</li>
+                            <li>После завершения проверьте, что Homebrew установлен, выполнив: <br>brew --version</li>
+                            <li>Если установка прошла успешно, вы увидите установленную версию Homebrew, например:
+                                <br>Homebrew 4.x.x
+                            </li>
+                        </ol>
+
+                        <h1 class="hero-start">Установка Git через Homebrew</h1>
+                        <ol>
+                            <li>В терминале выполните команду: <br>brew install git</li>
+                            <li>Дождитесь завершения установки</li>
+                        </ol>
+
+                        <h1 class="hero-start">Проверка установки</h1>
+                        <ol>
+                            <li>Убедитесь, что Git установлен, выполнив: <br>git --version</li>
+                            <li>Вы увидите сообщение с установленной версией, например: <br>git version 2.x.x</li>
+                        </ol>
+                    </div>
+                </div>
+
+
+                <div class="hero-install">
+                    <h1 class="hero-start-git">НАСТРОЙКА <span class="git-words">GIT</span></h1>
+                    <div class="install-file">
+                        <p>
+                            После установки Git выполните следующие шаги, чтобы настроить его для работы:
+                        </p>
+
+                        <ol>
+                            <li>
+                                <h3>Укажите email</h3>
+                                Email должен быть в формате i24s0000@students.it-college.ru, заменяя i24s0000 на ваш
+                                корпоративный логин: <br>git config --global user.email
+                                "i24s0000@students.it-college.ru"
+                            </li>
+                            <li>
+                                <h3>Укажите имя пользователя</h3>
+                                Имя пользователя будет отображаться в ваших коммитах. Вместо "i24s0000" используйте свой
+                                корпоративный логин: <br>git config --global user.name "i24s0000"
+                            </li>
+                            <li>
+                                <h3>Проверьте настройки</h3>
+                                Проверьте, что настройки применены корректно: <br>git config --list
+                            </li>
+
+                        </ol>
+
+                        <p>Вы должны увидеть строки с вашим корпоративным логином и email. Теперь Git готов к работе в
+                            колледже!</p>
+                    </div>
+                </div>
+
+                <div class="hero-install">
+                    <h1 class="hero-start-git">ОТПРАВКА ФАЙЛОВ В РЕПОЗИТОРИЙ <span class="git-words">GIT</span></h1>
+                    <div class="install-file">
+                        <ol>
+                            <li>Подключитесь к серверу колледжа через OpenVPN. Это обязательный шаг перед любыми
+                                действиями с репозиторием.</li>
+
+                            <li>
+                                <h3>Укажите путь до рабочего стола:</h3>cd Desktop
+                            </li>
+                            <li>
+                                <h3>Клонируйте репозиторий (замените URL на ссылку вашего репозитория):</h3>git clone
+                                URL
+                            </li>
+                            <li>
+                                <h3>Перейдите в папку репозитория:</h3>cd Work
+                            </li>
+                            <li>
+                                Закиньте все нужны файлы в папку Work (также для удобства можете создать внутри
+                                дополнительные папки)
+                            </li>
+                            <li>
+                                <h3>Добавьте все файлы в индекс:</h3> git add . <br>Команда git add . добавляет все
+                                измененные, новые и удаленные файлы из текущей директории и её вложенных папок в индекс
+                                Git. Это подготовительный этап перед созданием коммита.
+                            </li>
+                            <li>
+                                <h3>Создайте коммит (название коммита может быть любым, например, 111 или update):</h3>
+                                git commit -m "111" <br>Коммиты — это «снимки» вашего проекта в определённый момент
+                                времени. Они позволяют фиксировать изменения, описывать их и при необходимости
+                                возвращаться к предыдущим версиям. Это как история вашего проекта, доступная для анализа
+                                и отката.
+                            </li>
+                            <li>
+                                <h3>Отправьте изменения в репозиторий:</h3> git push
+                            </li>
+                        </ol>
+
+                        <p>Теперь ваши файлы успешно загружены в репозиторий! </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
