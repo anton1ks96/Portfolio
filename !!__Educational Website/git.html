@@ -31,17 +31,17 @@
 
                     <h2 class="hero-title-git">СОДЕРЖАНИЕ</h2>
                     <div class="buttons-git">
-                        <a href="#" class="btn-git">Установка Git на Windows</a>
-                        <a href="#" class="btn-git">Установка Git на MacOS</a>
-                        <a href="#" class="btn-git">Настройка Git</a>
-                        <a href="#" class="btn-git">Отправка файлов в репозиторий Git</a>
+                        <a class="btn-git" onclick="scrollToAnchor('nav-windows')">Установка Git на Windows</a>
+                        <a class="btn-git" onclick="scrollToAnchor('nav-macos')">Установка Git на MacOS</a>
+                        <a class="btn-git" onclick="scrollToAnchor('nav-setting')">Настройка Git</a>
+                        <a class="btn-git" onclick="scrollToAnchor('nav-send')">Отправка файлов в репозиторий Git</a>
                     </div>
                 </div>
 
                 <div class="hero-introduction">
                     <div class="hero-git-how">
                         <div class="git-how">
-                            <h1 class="hero-start">ЧТО ТАКОЕ GIT</h1>
+                            <h1>ЧТО ТАКОЕ <span class="git-words">GIT</span>:</h1>
                             <div class="git-line">
                                 <div class="line"></div>
                                 <p>
@@ -62,7 +62,7 @@
                 </div>
 
 
-                <div class="hero-install">
+                <div class="hero-install" id="nav-windows">
                     <h1 class="hero-start-git">УСТАНОВКА <span class="git-words">GIT</span> НА WINDOWS</h1>
                     <div class="install-file">
                         <h1 class="hero-start">Скачивание установочного файла</h1>
@@ -109,7 +109,7 @@
                 </div>
 
                 <div class="hero-install">
-                    <h1 class="hero-start-git">УСТАНОВКА <span class="git-words">GIT</span> НА MACOS</h1>
+                    <h1 class="hero-start-git" id="nav-macos">УСТАНОВКА <span class="git-words">GIT</span> НА MACOS</h1>
                     <div class="install-file">
                         <h1 class="hero-start">Установка Homebrew</h1>
                         <p>
@@ -146,7 +146,7 @@
 
 
                 <div class="hero-install">
-                    <h1 class="hero-start-git">НАСТРОЙКА <span class="git-words">GIT</span></h1>
+                    <h1 class="hero-start-git" id="nav-setting">НАСТРОЙКА <span class="git-words">GIT</span></h1>
                     <div class="install-file">
                         <p>
                             После установки Git выполните следующие шаги, чтобы настроить его для работы:
@@ -177,7 +177,7 @@
                 </div>
 
                 <div class="hero-install">
-                    <h1 class="hero-start-git">ОТПРАВКА ФАЙЛОВ В РЕПОЗИТОРИЙ <span class="git-words">GIT</span></h1>
+                    <h1 class="hero-start-git" id="nav-send">ОТПРАВКА ФАЙЛОВ В РЕПОЗИТОРИЙ <span class="git-words">GIT</span></h1>
                     <div class="install-file">
                         <ol>
                             <li>Подключитесь к серверу колледжа через OpenVPN. Это обязательный шаг перед любыми

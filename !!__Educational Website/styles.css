@@ -113,7 +113,8 @@ header a:hover {
 }
 
 .hero-title-git {
-    font-size: 30px;
+    font-size: 36px;
+    margin-bottom: -5px;;
     font-weight: bold;
 }
 
@@ -226,7 +227,7 @@ header a:hover {
 
 .hero-start {
     color: #DDFF00;
-    font-size: 18px;
+    font-size: 28px;
     letter-spacing: 3.5px;
 }
 
@@ -543,17 +544,18 @@ header a:hover {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    width: 450px;
 }
 
 .btn-git {
     display: inline-block;
     text-decoration: none;
     color: #D9D9D9;
+    background-color: transparent;
+    cursor: pointer;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #B2B2AD;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: 500;
 }
 
@@ -600,6 +602,7 @@ header a:hover {
     flex-direction: column;
     align-items: center;
     margin-bottom: 100px;
+    padding-bottom: 10%
 }
 
 .install-file {
