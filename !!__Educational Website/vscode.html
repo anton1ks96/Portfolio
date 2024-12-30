@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.svg">
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollSmoother.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/ScrollToAnchor.js" defer></script>
+    <title>Git Guide</title>
+</head>
+
+<body>
+<header>
+    <nav>
+        <a onclick="scrollToAnchor('faq')">FAQs</a>
+        <a onclick="scrollToAnchor('')">Главная</a>
+        <a onclick="scrollToAnchor('')">Контакты</a>
+    </nav>
+</header>
+<main>
+    <div class="wrapper">
+        <div class="content">
+            <div class="hero-section">
+                <h1 class="hero-title git-title">VISUAL STUDIO CODE</h1>
+                <p>Надежный компаньон в мире разработки</p>
+
+                <h2 class="hero-title-git">СОДЕРЖАНИЕ</h2>
+                <div class="buttons-git">
+                    <a class="btn-git" onclick="scrollToAnchor('nav-windows')">Установка VS Code</a>
+                    <a class="btn-git" onclick="scrollToAnchor('nav-macos')">Установка VS Code на Windows</a>
+                    <a class="btn-git" onclick="scrollToAnchor('nav-setting')">Установка VS Code на MacOS</a>
+                    <a class="btn-git" onclick="scrollToAnchor('nav-send')">Первичная настройка</a>
+                    <a class="btn-git" onclick="scrollToAnchor('nav-send')">Плагины</a>
+                </div>
+            </div>
+
+            <div class="hero-introduction">
+                <div class="hero-git-how">
+                    <div class="git-how">
+                        <h1>ЧТО ТАКОЕ <span class="git-words">VS CODE</span>:</h1>
+                        <div class="git-line">
+                            <div class="line"></div>
+                            <p>
+                                Visual Studio Code (VS Code) — это бесплатный редактор исходного кода, разработанный
+                                Microsoft.
+                                Он поддерживает множество языков программирования, имеет встроенную поддержку Git,
+                                мощную систему
+                                расширений и высокую настраиваемость. Благодаря своей гибкости и широким возможностям,
+                                VS Code
+                                стал одним из самых популярных инструментов среди разработчиков по всему миру.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="hero-install" id="nav-vscode">
+                <h1 class="hero-start-git">УСТАНОВКА <span class="git-words">VISUAL STUDIO CODE</span></h1>
+                <div class="install-file">
+
+                    <h1 class="hero-start">Установка VS CODE</h1>
+                    <h2 class="hero-start">Скачивание установочного файла</h2>
+                    <ol>
+                        <li>Откройте браузер и перейдите на официальный сайт Visual Studio Code:
+                            <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com</a>.
+                        </li>
+                        <li>На главной странице автоматически будет предложена версия для вашей операционной системы.
+                            Нажмите кнопку "Download for Windows" или выберите нужную версию для вашей системы
+                            (например, macOS или Linux).
+                        </li>
+                        <li>Дождитесь завершения загрузки установочного файла.</li>
+                    </ol>
+
+                    <h2 class="hero-start">Установка VS Code на Windows</h2>
+                    <ol>
+                        <li>Запустите скачанный установочный файл (обычно он называется
+                            <em>VSCodeSetup-x64-x.xx.x.exe</em>).
+                        </li>
+                        <li>Пройдите мастер установки, выполняя следующие шаги:
+                            <ul>
+                                <li><strong>Лицензионное соглашение:</strong> Прочитайте и примите лицензионное
+                                    соглашение, затем нажмите "Next".
+                                </li>
+                                <li><strong>Выбор папки установки:</strong> Оставьте путь по умолчанию или выберите
+                                    другую папку, затем нажмите "Next".
+                                </li>
+                                <li><strong>Выбор дополнительных задач:</strong> Рекомендуется отметить опции "Add to
+                                    PATH" и "Register Code as an editor for supported file types" для удобства
+                                    использования, затем нажмите "Next".
+                                </li>
+                                <li><strong>Установка:</strong> Нажмите "Install" для начала процесса установки.</li>
+                                <li><strong>Завершение установки:</strong> После завершения установки убедитесь, что
+                                    отмечена галочка "Launch Visual Studio Code", и нажмите "Finish" для запуска
+                                    редактора.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h2 class="hero-start">Установка VS Code на MacOS</h2>
+                    <ol>
+                        <li>Откройте скачанный файл (обычно это <em>VSCode-darwin-stable.zip</em>).</li>
+                        <li>Распакуйте архив и перетащите приложение <strong>Visual Studio Code</strong> в папку
+                            <strong>Applications</strong>.
+                        </li>
+                        <li>Запустите VS Code из папки <strong>Applications</strong>.</li>
+                        <li>(Опционально) Для удобного запуска из терминала можно установить команду
+                            <strong>code</strong>:
+                            <ul>
+                                <li>Откройте VS Code.</li>
+                                <li>Нажмите <em>Cmd+Shift+P</em> для открытия палитры команд.</li>
+                                <li>Введите <strong>shell command</strong> и выберите <em>Shell Command: Install 'code'
+                                    command in PATH</em>.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h1 class="hero-start">Первичная настройка</h1>
+                    <h2 class="hero-start">Настройка пользовательских параметров</h2>
+                    <p>
+                        После установки и первого запуска VS Code рекомендуется выполнить первичную настройку для
+                        комфортной работы:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Откройте настройки:</strong> Нажмите <em>Ctrl+,</em> (Windows) или <em>Cmd+,</em>
+                            (Mac)
+                            для открытия окна настроек. Либо используйте палитру команд (<em>Ctrl+Shift+P</em> или <em>Cmd+Shift+P</em>)
+                            и введите <strong>Preferences: Open Settings</strong>.
+                        </li>
+                        <li>
+                            Настройте основные параметры:
+                            <ul>
+                                <li><strong>Theme:</strong> Выберите предпочитаемую тему оформления.</li>
+                                <li><strong>Font Size:</strong> Установите удобный размер шрифта.</li>
+                                <li><strong>Tab Size:</strong> Настройте размер отступов для кода.</li>
+                                <li><strong>Синхронизация настроек:</strong> Войдите в свою учетную запись Microsoft или
+                                    GitHub для синхронизации настроек между устройствами.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h2 class="hero-start">Настройка темы оформления</h2>
+                    <ol>
+                        <li>Откройте палитру команд (<em>Ctrl+Shift+P</em> или <em>Cmd+Shift+P</em>).</li>
+                        <li>Введите <strong>Color Theme</strong> и выберите <em>Preferences: Color Theme</em>.</li>
+                        <li>Выберите тему из предложенного списка или установите дополнительные темы через расширения.
+                        </li>
+                    </ol>
+
+                    <h1 class="hero-start">Плагины</h1>
+                    <h2 class="hero-start">Установка расширений</h2>
+                    <p>
+                        Расширения (плагины) значительно расширяют функциональность VS Code.
+                        Для их установки выполните следующие шаги:
+                    </p>
+                    <ol>
+                        <li>
+                            Откройте панель расширений: Нажмите иконку <em>Extensions</em> на боковой панели
+                            или используйте сочетание <em>Ctrl+Shift+X</em> (Windows) / <em>Cmd+Shift+X</em> (Mac).
+                        </li>
+                        <li>
+                            Поиск расширений: В поле поиска введите название нужного расширения
+                            (например, <em>Prettier</em>, <em>Material Theme</em>).
+                        </li>
+                        <li>
+                            Установка: Нажмите кнопку <em>Install</em> рядом с выбранным расширением.
+                        </li>
+                    </ol>
+
+                    <h2 class="hero-start">Рекомендуемые плагины</h2>
+                    <h3>Темы</h3>
+                    <ul>
+                        <li><strong>Material Theme</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                        <li><strong>Night Owl</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                        <li><strong>Palenight Theme</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                        <li><strong>SynthWave '84</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h3>Иконки</h3>
+                    <ul>
+                        <li><strong>Material Icon Theme</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h3>Форматтеры</h3>
+                    <ul>
+                        <li><strong>Prettier - Code formatter</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h3>Инструменты разработки</h3>
+                    <ul>
+                        <li><strong>Live Server</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                        <li><strong>Blackbox AI</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=Blackboxapp.blackbox"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                        <li><strong>Auto Rename Tag</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                        <li><strong>HTML to CSS Autocompletion</strong> —
+                            <a href="https://marketplace.visualstudio.com/items?itemName=solnurkarim.html-to-css-autocompletion"
+                               target="_blank" rel="noopener noreferrer">
+                                Ссылка на Marketplace
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Теперь вы готовы начать использовать Visual Studio Code для разработки своих проектов!
+                        Установка и настройка редактора — первый шаг к эффективной и комфортной работе.
+                        Не забывайте регулярно обновлять расширения и настраивать среду под свои нужды
+                        для максимальной продуктивности.
+                    </p>
+
+                    <h1 class="hero-start">Дополнительные ресурсы</h1>
+                    <ul>
+                        <li><a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer">
+                            Официальная документация VS Code
+                        </a></li>
+                        <li><a href="https://marketplace.visualstudio.com/vscode" target="_blank"
+                               rel="noopener noreferrer">
+                            Marketplace VS Code
+                        </a></li>
+                        <li><a href="https://stackoverflow.com/questions/tagged/visual-studio-code" target="_blank"
+                               rel="noopener noreferrer">
+                            Сообщество VS Code на Stack Overflow
+                        </a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+</body>
+
+</html>
