@@ -225,7 +225,7 @@ header a:hover {
     }
 }
 
-.hero-start {
+.hero-start, .plugins h3 {
     color: #DDFF00;
     font-size: 28px;
     letter-spacing: 3.5px;
@@ -627,4 +627,13 @@ li {
 
 .git-words {
     color: #DDFF00;
+}
+
+.install-file a {
+    text-decoration: none;
+    color: #DDFF00;
+}
+
+.plugins li {
+    color: #D9D9D9;
 }
